@@ -23,6 +23,8 @@ def scraping():
         topic = news.select('li')[0].text
         news_topics[topic] = [news_topic.text for news_topic in news.select('li')[1:-2]]
 
+    print('終了')
+
     topics_dt = pd.DataFrame.from_dict(news_topics)
     topics_dt.apply( lambda x: x.str.replace(r'(new|写真|動画)',''))
     print('scraping終了')
