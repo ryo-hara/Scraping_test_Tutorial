@@ -21,4 +21,4 @@ for news in topics:
 import pandas as pd
 topics_dt = pd.DataFrame.from_dict(news_topics)
 topics_dt.apply( lambda x: x.str.replace(r'(new|写真|動画)',''))
-topics_dt.to_csv( "opppai.csv" )
+topics_dt.to_csv( "oppai.csv" )
