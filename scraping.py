@@ -25,6 +25,7 @@ def scraping():
 
     topics_dt = pd.DataFrame.from_dict(news_topics)
     topics_dt.apply( lambda x: x.str.replace(r'(new|写真|動画)',''))
+    print('scraping終了')
     #topics_dt.to_csv( "oppai.csv" )
 
     return 0
